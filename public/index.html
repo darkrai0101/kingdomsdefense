@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<title>Kingdoms Defense</title>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{		
+		background-color: #111111;
+		background-image: url('/bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		color: #3E1B01;
+		overflow-x: hidden;
+	}
+	.btn_link{
+		position: absolute; 
+		top: 40%;
+		left: 50%;
+		display: block;
+		width: 120px;		
+		margin: auto;
+		margin-left: -60px;
+		vertical-align: center;
+	}
+	</style>
+	<script>
+		var isMobile = {
+		    Android: function() {
+		        return /Android/i.test(navigator.userAgent);
+		    },
+		    BlackBerry: function() {
+		        return /BlackBerry/i.test(navigator.userAgent);
+		    },
+		    iOS: function() {
+		        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+		    },
+		    Windows: function() {
+		        return /IEMobile/i.test(navigator.userAgent);
+		    },
+		    any: function() {
+		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+		    }
+		};
+
+		function playnow(){
+			console.log('play now');
+			var url = "http://kingdomsdefense.com";
+			if(isMobile.Android()){
+				url = "https://play.google.com/store/apps/details?id=com.bkgamemaker.kingdomsdefense";				
+			}
+
+			if(isMobile.iOS()){
+				
+			}
+
+			if(isMobile.Windows()){
+				
+			}
+
+			window.open(url);
+			return;
+		}
+	</script>
+</head>
+<body>
+	<div class="btn_link">
+		<a href="" onclick="playnow()"><img width="150px" src="google-en.png" alt="google play"></a>
+	</div>
+</body>
+</html>
